@@ -72,8 +72,8 @@ div {
 
 .SidebarLogo .CloseSidebar > img {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
-    width: 10vmin;
-    height: 10vmin;
+    width: 80px;
+    height: 80px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -97,8 +97,8 @@ div {
 
 #OpenSidebar > img {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -422,11 +422,12 @@ input[type=text]:focus {
     margin: 15px 15px 0 90px ;
 }
 
+/*Home Portfolio Contact*/
 #mySidenav .links {
     width: 100%;
     text-align: center;
     font-family: Candara;
-    font-size: 3.5vmin;
+    font-size: 28px;
     top: 34vh;
     position: absolute;
 }
@@ -458,9 +459,10 @@ input[type=text]:focus {
 }
 
 .icons a img {
-    width: 4vmin;
-    height: 4vmin;
-    margin: 1.5vmin;
+    width: 27px;
+    height: 27px;
+    margin: 16px;
+    border-radius: 5px;
 }
 
 /*View Projects div - opacity*/
@@ -493,14 +495,6 @@ input[type=text]:focus {
     width: 100%;
 }
 
-
-#page2 .view-works a:hover {
-    cursor: hand;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
-    cursor: grab;
-}
-
 #page2 .view-works .list-websites img {
     display: block;
     margin-left: auto;
@@ -508,6 +502,10 @@ input[type=text]:focus {
     margin-top: 7%;
     max-width: 85%;
     max-height: 85%;
+    cursor: hand;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: grab;
 }
 
 #page2 .view-works .list-photographs img, #page2 .view-works .list-creativity img {

@@ -64,24 +64,23 @@ function OnLinkClick(btn) {
     }
 
 }
-function hover(element) {
-    element.setAttribute('src', '../IMAGES/fb_hover.png');
-}
-function unhover(element) {
-    element.setAttribute('src', '../IMAGES/fb.png');
-}
+
 function OnClickViewWebsites() {
     $("#OpenSidebar").hide(100);
     $("#view-works").css('visibility', 'visible').hide().show(500);
     $("#list-websites").css('visibility', 'visible').hide().show();
-
 }
 
 function OnClickViewPhotographs() {
     $("#OpenSidebar").hide(100);
     $("#view-works").css('visibility', 'visible').hide().show(500);
     $("#list-photographs").css('visibility', 'visible').hide().show();
+}
 
+function OnClickViewCreativity(){
+    $("#OpenSidebar").hide(100);
+    $("#view-works").css('visibility', 'visible').hide().show(500);
+    $("#list-creativity").css('visibility', 'visible').hide().show();
 }
 
 function OnClickCloseViewWebsites(){
@@ -89,6 +88,7 @@ function OnClickCloseViewWebsites(){
     $("#OpenSidebar").show(100);
     $("#list-websites").hide();
     $("#list-photographs").hide();
+    $("#list-creativity").hide();
 }
 
 
@@ -118,10 +118,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 }, false)
 
+document.addEventListener("DOMContentLoaded", function () {
+    var container = document.getElementById("list-creativity");
+    dragend = new Dragend(container, {
+        afterInitialize: function () {
+        }
+    });
+}, false)
 
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-219062-10']);
 _gaq.push(['_trackPageview']);
+
 
 (function () {
     var ga = document.createElement('script');
@@ -136,6 +144,7 @@ _gaq.push(['_trackPageview']);
 document.body.addEventListener('mousemove', function(){
   console.log('bodymousemove')
 })
+
 
 
 
