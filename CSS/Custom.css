@@ -8,13 +8,9 @@
     src: url(../FONTS/marguerite.ttf);
 }
 
-html {
-    height: 100%;
-}
-
 body {
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     background: transparent;
@@ -93,6 +89,7 @@ div {
     position: fixed;
     top: 2%;
     left: 2%;
+
 }
 
 #OpenSidebar > img {
@@ -113,6 +110,7 @@ div {
 }
 
 .custom-panel {
+    position: relative;
     width: 100%; /* Sets each custom-panel to the width and height*/
     /*height: 100vh; !* of the body (which is set to the window)*!*/
     margin: 0;
@@ -121,44 +119,52 @@ div {
 }
 
 #page1 > .color1 {
-    position: relative;
+    position: absolute;
     width: 50%;
     height: 100%;
     background: #b4fbff;
     margin: 0;
-    float: left;
 }
 
 #page1 > .color2 {
-    position: relative;
+    position: absolute;
     width: 50%;
     height: 100%;
     background: #ffb4b9;
-    float: left;
+    left: 50%;
 }
 
-.page1-contents {
+#page1 .page1-container {
+    display: table;
     position: absolute;
     width: 100%;
+    height: 100%;
+}
+
+#page1 .page1-container .wrapper {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 900px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#page1 .page1-container .wrapper  .page1-contents {
+    width: 100%;
     text-align: center;
-    margin: 90px 0 0 0;
-    line-height: 200%;
 }
 
 #page1 .piattos {
     width: 275px;
-    height: 275px;;
+    height: 275px;
     background: #28282b;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-
     margin-top: 90px;
     margin-bottom: 90px;
+    display: block;
+    margin: 90px auto;
+
 }
 
 #page1 .piattos > img {
@@ -168,24 +174,25 @@ div {
 
 #page1 .text {
     font-family: Candara;
-    text-align: center;
     display: inline;
     color: #353535;
 }
 
-#page1 .text h1 {
+/*Hello*/
+#page1 .text header {
     font-family: Marguerite;
     font-size: 48px;
 }
 
-#page1 .text h1 img {
+#page1 .text header img {
     width: 50px;
     height: 50px;
     margin-left: 10px;
     margin-top: 10px;
 }
 
-#page1 .text p {
+/*Description*/
+#page1 .text article {
     font-family: Candara;
     font-size: 18px;
 }
@@ -240,14 +247,14 @@ div {
     font-family: Candara;
 }
 
-#page2 .text > h1 {
+#page2 .text > header {
     font-size: 30px;
     text-align: center;
     margin: 0;
     margin-bottom: 4px;
 }
 
-#page2 .text > p {
+#page2 .text > article {
     font-size: 16px;
     text-align: center;
     display: block;
@@ -280,7 +287,7 @@ div {
     background-color: transparent;
 }
 
-#page2 > .color2 > h1 {
+#page2 > .color2 > header {
     width: 100%;
     font-family: Marguerite;
     font-size: 48px;
@@ -290,7 +297,7 @@ div {
     top: 10%;
 }
 
-#page2 > .color2 > h1 img {
+#page2 > .color2 > header img {
     width: 50px;
     height: 50px;
     margin-left: 10px;
@@ -309,13 +316,17 @@ div {
 #page3 .text {
     width: 100%;
     text-align: center;
-    top: 15%;
+
 }
 
-#page3 .text h1 {
+#page3 .text header {
     font-family: Marguerite;
     font-size: 48px;
+    tex-align: center;
+    display: block;
     color: #353535;
+    padding-top: 8px;
+
 }
 
 #page3 .text img {
@@ -325,7 +336,7 @@ div {
     margin-top: 10px;
 }
 
-#page3 .page3-content {
+#page3 .page3-contents {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -334,22 +345,16 @@ div {
     overflow: hidden;
 }
 
-#page3 .mail{
-    width: 100%;
-    margin-top: 10%;
-}
-
-#page3 .mail img {
-    width: 900px;
-    height: 800px;
-}
-
 #page3 .Details {
     font-family: Candara;
     color: #353535;
     position: absolute;
-    top:36%;
-    left:29%;
+    top: 45%;
+    width: 100%;
+}
+
+.Details-contents{
+    display: inline-block;
 }
 
 #page3 .Details #name {
@@ -377,12 +382,12 @@ div {
 }
 
 #page3 .Details #message textarea {
-    margin-left: 11px;
+    margin-left: 5px;
     resize: none;
     background-color: #f5f1e9;
     border-radius: 5px;
     border-width: 0;
-    width: 500px;
+    width: 440px;
     height: 150px;
     padding-left: 10px;
     padding-right: 10px;
@@ -402,7 +407,7 @@ div {
 
 /**Textfields**/
 input[type=text] {
-    width: 500px;
+    width: 440px;
     height: 30px;
     background-color: #f5f1e9;
     border-radius: 5px;
@@ -419,7 +424,7 @@ input[type=text]:focus {
 }
 
 #btnSend .btnSend {
-    margin: 15px 15px 0 90px ;
+    margin: 15px 15px 0 90px;
 }
 
 /*Home Portfolio Contact*/
@@ -468,7 +473,6 @@ input[type=text]:focus {
 /*View Projects div - opacity*/
 #page2 .view-works {
     position: absolute;
-    left: 0;
     background: rgb(0, 0, 0); /* Fall-back for browsers that don't                         support rgba */
     background: rgba(0, 0, 0, .8);
     width: 100%;
@@ -478,7 +482,7 @@ input[type=text]:focus {
 }
 
 /*Container of contents*/
-#page2 .view-works .list-websites, #page2 .view-works .list-photographs, #page2 .view-works .list-creativity  {
+#page2 .view-works .list-websites, #page2 .view-works .list-photographs, #page2 .view-works .list-creativity {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -488,7 +492,7 @@ input[type=text]:focus {
 }
 
 /*List*/
-#page2 .view-works .list-websites ul, #page2 .view-works .list-photographs ul,  #page2 .view-works .list-creativity ul{
+#page2 .view-works .list-websites ul, #page2 .view-works .list-photographs ul, #page2 .view-works .list-creativity ul {
     list-style-type: none;
     list-style-position: inside;
     padding: 0;
@@ -536,24 +540,110 @@ input[type=text]:focus {
     border: none;
 }
 
-#page2
+#page3 .color .svg-mail {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+#page3 .color .svg-mail .paper {
+    padding-top: 95px;
+}
+
+#page3 .color .svg-mail .outside-mail,
+#page3 .color .svg-mail .inside-mail,
+#page3 .color .svg-mail .cover {
+    position: absolute;
+    width: 100%;
+    top: 162px;
+}
+
+#view-full-website {
+    background-color: #414141;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#view-full-website .description-bar{
+    background-color: #4c4c4c;
+    width: 15%;
+    height: 100%;
+    font-family: Candara;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 5px;
+
+    -webkit-box-shadow: 10px 10px 15px -6px rgba(31,31,31,1);
+    -moz-box-shadow: 10px 10px 15px -6px rgba(31,31,31,1);
+    box-shadow: 10px 10px 15px -6px rgba(31,31,31,1);
+}
+
+#view-full-website .description-bar .close-btn #btn-close-description{
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#view-full-website .description-bar .close-btn img{
+    width: 20px;
+    height: 20px;
+}
+
+#view-full-website .description-bar header{
+    font-size: 24px;
+}
+
+#view-full-website .description-bar article{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+#view-full-websites .app-grade-picture{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+#view-full-website .app-grade-picture img{
+
+}
+
+
+
+
+
+
+
+
+
+
+/*#page2*/
+
 /*@media screen and (min-width: 1366px) {*/
-/*.custom-panel {*/
-/*height: 768px; !* of the body (which is set to the window)*!*/
+    /*.custom-panel {*/
+        /*height: 768px; !* of the body (which is set to the window)*!*/
+    /*}*/
 /*}*/
-/*}*/
+
 /*@media screen and (min-width: 1440px) {*/
-/*.custom-panel {*/
-/*height: 900px; !* of the body (which is set to the window)*!*/
+    /*.custom-panel {*/
+        /*height: 900px; !* of the body (which is set to the window)*!*/
+    /*}*/
 /*}*/
-/*}*/
+
 /*@media screen and (min-width: 1600px) {*/
-/*.custom-panel {*/
-/*height: 1050px; !* of the body (which is set to the window)*!*/
+    /*.custom-panel {*/
+        /*height: 1050px; !* of the body (which is set to the window)*!*/
+    /*}*/
 /*}*/
-/*}*/
+
 /*@media screen and (min-width: 1920px) {*/
-/*.custom-panel {*/
-/*height: 1080px; !* of the body (which is set to the window)*!*/
-/*}*/
+    /*.custom-panel {*/
+        /*height: 1080px; !* of the body (which is set to the window)*!*/
+    /*}*/
 /*}*/
