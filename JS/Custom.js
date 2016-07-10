@@ -4,7 +4,6 @@
 /***/
 
 
-
 /**Resize panel height if the window is resized**/
 // $(window).resize(function() {
 //     $('.custom-panel').height($(window).height());
@@ -17,7 +16,7 @@
 window.onload = function () {
 
     $('.custom-panel').height($(window).height());
-    
+
     $(".scroll").click(function (event) {
         event.preventDefault();
         //calculate destination place
@@ -55,11 +54,11 @@ function OnLinkClick(btn) {
     document.getElementById("btnContact").style.color = "#ffffff";
 
 
-    if(btn == document.getElementById("btnAbout")){
-        btn.style.color="#b4fbff";
-    }else if(btn == document.getElementById("btnPortfolio")){
-        btn.style.color="#ffe5b4";
-    }else if(btn == document.getElementById("btnContact")){
+    if (btn == document.getElementById("btnAbout")) {
+        btn.style.color = "#b4fbff";
+    } else if (btn == document.getElementById("btnPortfolio")) {
+        btn.style.color = "#ffe5b4";
+    } else if (btn == document.getElementById("btnContact")) {
         btn.style.color = "#ffc6b4";
     }
 
@@ -77,13 +76,13 @@ function OnClickViewPhotographs() {
     $("#list-photographs").css('visibility', 'visible').hide().show();
 }
 
-function OnClickViewCreativity(){
+function OnClickViewCreativity() {
     $("#OpenSidebar").hide(100);
     $("#view-works").css('visibility', 'visible').hide().show(500);
     $("#list-creativity").css('visibility', 'visible').hide().show();
 }
 
-function OnClickCloseViewWebsites(){
+function OnClickCloseViewWebsites() {
     $("#view-works").hide(500);
     $("#OpenSidebar").show(100);
     $("#list-websites").hide();
@@ -92,13 +91,9 @@ function OnClickCloseViewWebsites(){
 }
 
 
-
-
-
-
-
-
-
+$(document).ready(function(){
+    $('.single-item').slick();
+});
 
 
 // Function to swipe projects
@@ -141,9 +136,6 @@ _gaq.push(['_trackPageview']);
 })();
 
 
-document.body.addEventListener('mousemove', function(){
-  console.log('bodymousemove')
-})
 
 
 

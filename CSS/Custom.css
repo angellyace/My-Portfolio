@@ -142,9 +142,9 @@ div {
 }
 
 #page1 .page1-container .wrapper {
-    margin: 0 auto;
     min-width: 320px;
     max-width: 900px;
+    margin: 0 auto;
     display: table-cell;
     vertical-align: middle;
 }
@@ -478,52 +478,89 @@ input[type=text]:focus {
     width: 100%;
     height: 100%;
     padding: 0;
-    visibility: hidden;
+    visibility: visible;
 }
 
-/*Container of contents*/
-#page2 .view-works .list-websites, #page2 .view-works .list-photographs, #page2 .view-works .list-creativity {
+#page2 .view-works .carousel-control img{
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+
+.carousel-control.right img{
+    right: 0;
+}
+
+#page2 .view-works .carousel-inner .item img{
+    display: block;
+    margin: 0 auto;
+    max-width: 85%;
+    max-height: 85%;
+
+}
+
+#page2 .view-works .container{
+    display: table;
+    position: absolute;
     width: 100%;
     height: 100%;
-    background: transparent;
-    margin: 0;
-    overflow: hidden;
-    visibility: hidden;
 }
 
-/*List*/
-#page2 .view-works .list-websites ul, #page2 .view-works .list-photographs ul, #page2 .view-works .list-creativity ul {
-    list-style-type: none;
-    list-style-position: inside;
-    padding: 0;
-    width: 100%;
+#page2 .view-works .container #myCarousel{
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-#page2 .view-works .list-websites img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 7%;
-    max-width: 85%;
-    max-height: 85%;
-    cursor: hand;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
-    cursor: grab;
-}
 
-#page2 .view-works .list-photographs img, #page2 .view-works .list-creativity img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
-    max-width: 85%;
-    max-height: 85%;
-    cursor: hand;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
-    cursor: grab;
-}
+
+
+
+/*Container of contents*/
+/*#page2 .view-works .list-websites, #page2 .view-works .list-photographs, #page2 .view-works .list-creativity {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: transparent;*/
+    /*margin: 0;*/
+    /*overflow: hidden;*/
+    /*visibility: visible;*/
+/*}*/
+
+/*!*List*!*/
+/*#page2 .view-works .list-websites ul, #page2 .view-works .list-photographs ul, #page2 .view-works .list-creativity ul {*/
+    /*list-style-type: none;*/
+    /*list-style-position: inside;*/
+    /*padding: 0;*/
+    /*width: 100%;*/
+/*}*/
+
+/*#page2 .view-works .list-websites img {*/
+    /*display: block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*margin-top: 7%;*/
+    /*max-width: 85%;*/
+    /*max-height: 85%;*/
+    /*cursor: hand;*/
+    /*cursor: -moz-grab;*/
+    /*cursor: -webkit-grab;*/
+    /*cursor: grab;*/
+/*}*/
+
+/*#page2 .view-works .list-photographs img, #page2 .view-works .list-creativity img {*/
+    /*display: block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*margin-top: 5%;*/
+    /*max-width: 85%;*/
+    /*max-height: 85%;*/
+    /*cursor: hand;*/
+    /*cursor: -moz-grab;*/
+    /*cursor: -webkit-grab;*/
+    /*cursor: grab;*/
+/*}*/
 
 #view-works #closeViewWebsites {
     background: Transparent;
@@ -609,9 +646,7 @@ input[type=text]:focus {
     left: 50px;
 }
 
-#view-full-website .app-grade-picture img{
 
-}
 
 
 
