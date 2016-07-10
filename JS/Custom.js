@@ -17,6 +17,8 @@ window.onload = function () {
 
     $('.custom-panel').height($(window).height());
 
+
+
     $(".scroll").click(function (event) {
         event.preventDefault();
         //calculate destination place
@@ -67,7 +69,7 @@ function OnLinkClick(btn) {
 function OnClickViewWebsites() {
     $("#OpenSidebar").hide(100);
     $("#view-works").css('visibility', 'visible').hide().show(500);
-    $("#list-websites").css('visibility', 'visible').hide().show();
+    $("#list-website").css('visibility', 'visible').hide().show();
 }
 
 function OnClickViewPhotographs() {
@@ -85,56 +87,60 @@ function OnClickViewCreativity() {
 function OnClickCloseViewWebsites() {
     $("#view-works").hide(500);
     $("#OpenSidebar").show(100);
-    $("#list-websites").hide();
+    $("#list-website").hide();
     $("#list-photographs").hide();
     $("#list-creativity").hide();
 }
 
-
-$(document).ready(function(){
-    $('.single-item').slick();
+// // Stop carousel autoplay
+$(function() {
+    $('.carousel').each(function(){
+        $(this).carousel({
+            interval: false
+        });
+    });
 });
 
-
 // Function to swipe projects
-document.addEventListener("DOMContentLoaded", function () {
-    var container = document.getElementById("list-websites");
-    dragend = new Dragend(container, {
-        afterInitialize: function () {
-        }
-    });
-}, false)
-
-document.addEventListener("DOMContentLoaded", function () {
-    var container = document.getElementById("list-photographs");
-    dragend = new Dragend(container, {
-        afterInitialize: function () {
-        }
-    });
-}, false)
-
-document.addEventListener("DOMContentLoaded", function () {
-    var container = document.getElementById("list-creativity");
-    dragend = new Dragend(container, {
-        afterInitialize: function () {
-        }
-    });
-}, false)
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-219062-10']);
-_gaq.push(['_trackPageview']);
-
-
-(function () {
-    var ga = document.createElement('script');
-    ga.type = 'text/javascript';
-    ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(ga, s);
-})();
-
+//
+// document.addEventListener("DOMContentLoaded", function () {
+//     var container = document.getElementById("list-websites");
+//     dragend = new Dragend(container, {
+//         afterInitialize: function () {
+//         }
+//     });
+// }, false)
+//
+// document.addEventListener("DOMContentLoaded", function () {
+//     var container = document.getElementById("list-photographs");
+//     dragend = new Dragend(container, {
+//         afterInitialize: function () {
+//         }
+//     });
+// }, false)
+//
+// document.addEventListener("DOMContentLoaded", function () {
+//     var container = document.getElementById("list-creativity");
+//     dragend = new Dragend(container, {
+//         afterInitialize: function () {
+//         }
+//     });
+// }, false)
+//
+// var _gaq = _gaq || [];
+// _gaq.push(['_setAccount', 'UA-219062-10']);
+// _gaq.push(['_trackPageview']);
+//
+//
+// (function () {
+//     var ga = document.createElement('script');
+//     ga.type = 'text/javascript';
+//     ga.async = true;
+//     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//     var s = document.getElementsByTagName('script')[0];
+//     s.parentNode.insertBefore(ga, s);
+// })();
+//
 
 
 

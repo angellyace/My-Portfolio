@@ -478,7 +478,7 @@ input[type=text]:focus {
     width: 100%;
     height: 100%;
     padding: 0;
-    visibility: visible;
+    visibility: hidden;
 }
 
 #page2 .view-works .carousel-control img{
@@ -493,12 +493,19 @@ input[type=text]:focus {
     right: 0;
 }
 
-#page2 .view-works .carousel-inner .item img{
+#page2 .view-works #list-website .carousel-inner .item img,
+#page2 .view-works #list-photographs .carousel-inner .item img{
     display: block;
     margin: 0 auto;
-    max-width: 85%;
-    max-height: 85%;
+    min-width: 320px;
+    max-width: 950px;
+}
 
+#page2 .view-works #list-creativity .carousel-inner .item img{
+    display: block;
+    margin: 0 auto;
+    max-height: 700px;
+    max-width: 900px;
 }
 
 #page2 .view-works .container{
@@ -508,13 +515,18 @@ input[type=text]:focus {
     height: 100%;
 }
 
-#page2 .view-works .container #myCarousel{
+#page2 .view-works .container #list-website-carousel,
+#page2 .view-works .container #list-photographs-carousel,
+#page2 .view-works .container #list-creativity-carousel{
+
     margin: 0 auto;
     display: table-cell;
     vertical-align: middle;
 }
 
-
+#list-photographs, #list-website, #list-creativity{
+    visibility: hidden;
+}
 
 
 
