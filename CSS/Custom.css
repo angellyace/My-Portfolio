@@ -89,7 +89,7 @@ div {
     position: fixed;
     top: 2%;
     left: 2%;
-
+    visibility: hidden;
 }
 
 #OpenSidebar > img {
@@ -529,6 +529,27 @@ input[type=text]:focus {
 }
 
 
+element.style {
+    width: 100%;
+    height: 100%;
+}
+#particles-js .particles-js-canvas-el {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-animation: appear 1.4s 1;
+    animation: appear 1.4s 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+
+
 
 /*Container of contents*/
 /*#page2 .view-works .list-websites, #page2 .view-works .list-photographs, #page2 .view-works .list-creativity {*/
@@ -617,12 +638,12 @@ input[type=text]:focus {
 
 #view-full-website .description-bar{
     background-color: #4c4c4c;
-    width: 15%;
+    width: 18%;
     height: 100%;
     font-family: Candara;
     color: #ffffff;
-    text-align: center;
-    padding: 50px 5px;
+    text-align: left;
+    padding: 50px 10px 50px 55px;
 
     -webkit-box-shadow: 10px 10px 15px -6px rgba(31,31,31,1);
     -moz-box-shadow: 10px 10px 15px -6px rgba(31,31,31,1);
@@ -647,15 +668,33 @@ input[type=text]:focus {
 }
 
 #view-full-website .description-bar article{
-    padding-top: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-#view-full-websites .app-grade-picture{
+#view-full-website .main-final-websites{
+
     width: 100%;
+    padding: 50px 50px;
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: 1%;
+    left: 10%;
+    margin: auto;
+
+}
+
+#view-full-website .main-final-websites .picture-website{
+    float: left;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#view-full-website .main-final-websites .picture-website img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    min-width: 800px;
 }
 
 

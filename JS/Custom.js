@@ -33,6 +33,29 @@ window.onload = function () {
     });
 }
 
+particlesJS.load('particles-js', '../assets/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
+});
+
+
+
+
+
+
+//
+// $(document).ready(function(){
+//
+//     $('body').on({
+//         'mousewheel': function(e) {
+//             if (e.target.id == 'custom-panel') return;
+//             e.preventDefault();
+//             e.stopPropagation();
+//         }
+//     })
+//
+// });
+
+
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
     document.getElementById("mySidenav").style.width = "15%";
