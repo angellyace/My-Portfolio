@@ -68,7 +68,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
-    document.getElementById('OpenSidebar').style.visibility = "visible";
+    $("#OpenSidebar").css('visibility', 'visible').hide().show(500);
     //document.getElementById('page1-text').style.marginLeft="10%";
 }
 
@@ -93,7 +93,29 @@ function OnClickViewWebsites() {
     $("#OpenSidebar").hide(100);
     $("#view-works").css('visibility', 'visible').hide().show(500);
     $("#list-website").css('visibility', 'visible').hide().show();
+    $('#main').css('overflow','hidden')
 }
+
+function OnClickViewFullAppGrade() {
+    $("#view-full-website-appgrade").css('visibility', 'visible').hide().show(500);
+    $(".custom-panel").hide();
+}
+
+function OnClickViewFullHappyDental() {
+    $(".custom-panel").hide();
+    $("#view-full-website-happydental").css('visibility', 'visible').hide().show(500);
+}
+
+function OnClickViewFullHappyFeet() {
+    $(".custom-panel").hide();
+    $("#view-full-website-happyfeet").css('visibility', 'visible').hide().show(500);
+}
+
+function OnClickCloseFullWebsite(){
+    $(".view-full-website").hide(500);
+    $(".custom-panel").show();
+}
+
 
 function OnClickViewPhotographs() {
     $("#OpenSidebar").hide(100);

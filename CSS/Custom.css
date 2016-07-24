@@ -31,7 +31,7 @@ div {
     top: 0;
     left: 0;
     background-color: #353535; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 
@@ -89,7 +89,7 @@ div {
     position: fixed;
     top: 2%;
     left: 2%;
-    visibility: hidden;
+    z-index: 2;
 }
 
 #OpenSidebar > img {
@@ -248,10 +248,11 @@ div {
 }
 
 #page2 .text > header {
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
     margin: 0;
     margin-bottom: 4px;
+    margin-top: 7px;
 }
 
 #page2 .text > article {
@@ -263,7 +264,11 @@ div {
     margin-top: 10px;
 }
 
-#page2 .btn {
+#page2 .btns {
+    width: 100%;
+    margin: 30px 0;
+}
+#page2 .btns button{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -471,17 +476,20 @@ input[type=text]:focus {
 }
 
 /*View Projects div - opacity*/
-#page2 .view-works {
-    position: absolute;
+.view-works {
+    position: fixed;
+    top: 0;
+    left: 0;
     background: rgb(0, 0, 0); /* Fall-back for browsers that don't                         support rgba */
     background: rgba(0, 0, 0, .8);
     width: 100%;
     height: 100%;
     padding: 0;
     visibility: hidden;
+    z-index: 1;
 }
 
-#page2 .view-works .carousel-control img{
+.view-works .carousel-control img{
     position: absolute;
     top: 50%;
     z-index: 5;
@@ -492,32 +500,31 @@ input[type=text]:focus {
 .carousel-control.right img{
     right: 0;
 }
-
-#page2 .view-works #list-website .carousel-inner .item img,
-#page2 .view-works #list-photographs .carousel-inner .item img{
+.view-works #list-website .carousel-inner .item img,
+.view-works #list-photographs .carousel-inner .item img{
     display: block;
     margin: 0 auto;
     min-width: 320px;
     max-width: 950px;
 }
 
-#page2 .view-works #list-creativity .carousel-inner .item img{
+.view-works #list-creativity .carousel-inner .item img{
     display: block;
     margin: 0 auto;
     max-height: 700px;
     max-width: 900px;
 }
 
-#page2 .view-works .container{
+ .view-works .container{
     display: table;
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-#page2 .view-works .container #list-website-carousel,
-#page2 .view-works .container #list-photographs-carousel,
-#page2 .view-works .container #list-creativity-carousel{
+.view-works .container #list-website-carousel,
+.view-works .container #list-photographs-carousel,
+.view-works .container #list-creativity-carousel{
 
     margin: 0 auto;
     display: table-cell;
@@ -629,14 +636,22 @@ canvas {
     top: 162px;
 }
 
-#view-full-website {
+.view-full-website {
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #414141;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    visibility: hidden;
+    z-index: 2;
 }
 
-#view-full-website .description-bar{
+.view-full-website .description-bar{
+    position: fixed;
     background-color: #4c4c4c;
     width: 18%;
     height: 100%;
@@ -650,7 +665,7 @@ canvas {
     box-shadow: 10px 10px 15px -6px rgba(31,31,31,1);
 }
 
-#view-full-website .description-bar .close-btn #btn-close-description{
+.view-full-website .description-bar .close-btn .btn-close-description{
     background: transparent;
     border: none;
     position: absolute;
@@ -658,46 +673,62 @@ canvas {
     left: 20px;
 }
 
-#view-full-website .description-bar .close-btn img{
+.view-full-website .description-bar .close-btn img{
     width: 20px;
     height: 20px;
 }
 
-#view-full-website .description-bar header{
+.view-full-website .description-bar header{
     font-size: 24px;
 }
 
-#view-full-website .description-bar article{
+.view-full-website .description-bar article{
     font-size: 16px;
 }
 
-#view-full-website .main-final-websites{
-
-    width: 100%;
+.view-full-website .main-final-websites{
     padding: 50px 50px;
-    position: absolute;
+    width: 82%;
+    position: relative;
     top: 1%;
-    left: 10%;
-    margin: auto;
-
+    left: 18%;
 }
 
-#view-full-website .main-final-websites .picture-website{
-    float: left;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
 
-#view-full-website .main-final-websites .picture-website img{
+.view-full-website .main-final-websites .picture-website img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
     max-width: 1000px;
     min-width: 800px;
 }
 
+.view-full-website .main-final-websites .picture-mobile img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    max-height: 400px;
+    min-width: 200px;
+}
 
+.img-style-website{
+    background: transparent;
+    border: none;
+}
+
+#view-full-website-happyfeet .picture-mobile{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.picture-mobile span{
+    float:left;
+    margin: 20px;
+
+}
 
 
 
