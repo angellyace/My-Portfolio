@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     background: transparent;
+    overflow-x: hidden;
 }
 
 div {
@@ -38,6 +39,7 @@ div {
     -webkit-box-shadow: 7px 0px 5px -1px rgba(96, 96, 96, 0.6);
     -moz-box-shadow: 7px 0px 5px -1px rgba(96, 96, 96, 0.6);
     box-shadow: 7px 0px 5px -1px rgba(96, 96, 96, 0.6);
+    z-index: 20;
 }
 
 /* The navigation menu links */
@@ -112,7 +114,7 @@ div {
 .custom-panel {
     position: relative;
     width: 100%; /* Sets each custom-panel to the width and height*/
-    /*height: 100vh; !* of the body (which is set to the window)*!*/
+    height: 766px; /* of the body (which is set to the window)*/
     margin: 0;
     background: transparent;
     overflow: hidden;
@@ -266,7 +268,7 @@ div {
 
 #page2 .btns {
     width: 100%;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 #page2 .btns button{
     display: block;
@@ -344,6 +346,7 @@ div {
 #page3 .page3-contents {
     position: absolute;
     width: 100%;
+    height: 100%;
     text-align: center;
     margin: 90px 0 0 0;
     line-height: 200%;
@@ -354,7 +357,7 @@ div {
     font-family: Candara;
     color: #353535;
     position: absolute;
-    top: 45%;
+    bottom: 120px;
     width: 100%;
 }
 
@@ -555,53 +558,6 @@ canvas {
     vertical-align: bottom;
 }
 
-
-
-
-/*Container of contents*/
-/*#page2 .view-works .list-websites, #page2 .view-works .list-photographs, #page2 .view-works .list-creativity {*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*background: transparent;*/
-    /*margin: 0;*/
-    /*overflow: hidden;*/
-    /*visibility: visible;*/
-/*}*/
-
-/*!*List*!*/
-/*#page2 .view-works .list-websites ul, #page2 .view-works .list-photographs ul, #page2 .view-works .list-creativity ul {*/
-    /*list-style-type: none;*/
-    /*list-style-position: inside;*/
-    /*padding: 0;*/
-    /*width: 100%;*/
-/*}*/
-
-/*#page2 .view-works .list-websites img {*/
-    /*display: block;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*margin-top: 7%;*/
-    /*max-width: 85%;*/
-    /*max-height: 85%;*/
-    /*cursor: hand;*/
-    /*cursor: -moz-grab;*/
-    /*cursor: -webkit-grab;*/
-    /*cursor: grab;*/
-/*}*/
-
-/*#page2 .view-works .list-photographs img, #page2 .view-works .list-creativity img {*/
-    /*display: block;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*margin-top: 5%;*/
-    /*max-width: 85%;*/
-    /*max-height: 85%;*/
-    /*cursor: hand;*/
-    /*cursor: -moz-grab;*/
-    /*cursor: -webkit-grab;*/
-    /*cursor: grab;*/
-/*}*/
-
 #view-works #closeViewWebsites {
     background: Transparent;
     right: 2%;
@@ -622,10 +578,12 @@ canvas {
     text-align: center;
     display: block;
     margin: auto;
+   position: absolute;
+    bottom: 0;
 }
 
 #page3 .color .svg-mail .paper {
-    padding-top: 95px;
+
 }
 
 #page3 .color .svg-mail .outside-mail,
@@ -633,7 +591,7 @@ canvas {
 #page3 .color .svg-mail .cover {
     position: absolute;
     width: 100%;
-    top: 162px;
+    bottom: 0;
 }
 
 .view-full-website {
@@ -643,7 +601,6 @@ canvas {
     background-color: #414141;
     width: 100%;
     height: 100%;
-    position: fixed;
     overflow-y: scroll;
     overflow-x: hidden;
     visibility: hidden;
@@ -727,40 +684,9 @@ canvas {
 .picture-mobile span{
     float:left;
     margin: 20px;
-
 }
 
+.not-available{
+    width: 100%;
 
-
-
-
-
-
-
-
-
-/*#page2*/
-
-/*@media screen and (min-width: 1366px) {*/
-    /*.custom-panel {*/
-        /*height: 768px; !* of the body (which is set to the window)*!*/
-    /*}*/
-/*}*/
-
-/*@media screen and (min-width: 1440px) {*/
-    /*.custom-panel {*/
-        /*height: 900px; !* of the body (which is set to the window)*!*/
-    /*}*/
-/*}*/
-
-/*@media screen and (min-width: 1600px) {*/
-    /*.custom-panel {*/
-        /*height: 1050px; !* of the body (which is set to the window)*!*/
-    /*}*/
-/*}*/
-
-/*@media screen and (min-width: 1920px) {*/
-    /*.custom-panel {*/
-        /*height: 1080px; !* of the body (which is set to the window)*!*/
-    /*}*/
-/*}*/
+}

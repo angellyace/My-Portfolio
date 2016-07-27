@@ -18,7 +18,6 @@ window.onload = function () {
     $('.custom-panel').height($(window).height());
 
 
-
     $(".scroll").click(function (event) {
         event.preventDefault();
         //calculate destination place
@@ -33,7 +32,7 @@ window.onload = function () {
     });
 }
 
-particlesJS.load('particles-js', '../assets/particlesjs-config.json', function() {
+particlesJS.load('particles-js', '../My-Portfolio/assets/particlesjs-config.json', function() {
     console.log('callback - particles.js config loaded');
 });
 
@@ -145,6 +144,12 @@ $(function() {
         });
     });
 });
+
+function OnClickSendMail() {
+    alert('Coming Soon');
+}
+
+
 
 // Function to swipe projects
 //
