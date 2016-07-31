@@ -110,6 +110,11 @@ function OnClickViewFullHappyFeet() {
     $("#view-full-website-happyfeet").css('visibility', 'visible').hide().show(500);
 }
 
+function OnClickViewFullWeCare() {
+    $(".custom-panel").hide();
+    $("#view-full-website-wecare").css('visibility', 'visible').hide().show(500);
+}
+
 function OnClickCloseFullWebsite(){
     $(".view-full-website").hide(500);
     $(".custom-panel").show();

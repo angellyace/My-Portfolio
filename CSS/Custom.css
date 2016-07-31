@@ -690,3 +690,12 @@ canvas {
     width: 100%;
 
 }
+
+.copyright p{
+    color: white;
+    font-size: 16px;
+    font-family: Candara;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+}
